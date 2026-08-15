@@ -7,6 +7,10 @@ cask "hora" do
   desc "Calendar app for focused planning"
   homepage "https://horacal.app"
 
+  livecheck do
+    skip "Updated directly by the Hora release pipeline"
+  end
+
   depends_on macos: :tahoe
 
   app "hora Calendar.app"
