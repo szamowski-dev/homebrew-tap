@@ -1,8 +1,8 @@
 cask "hora" do
-  version "1.0.24,365"
-  sha256 "767ce3b00c607cbcfa738d83fce510dbf0c1f809fa2e12df777f8e8568268bf7"
+  version "1.0.25,372"
+  sha256 "1b31c024990605dea16a56903dd83e3f05958c38eb0e42427dc3c2d7bda0e5e1"
 
-  url "https://downloads.horacal.app/direct/stable/releases/1.0.24/365/hora-calendar-1.0.24-365.zip"
+  url "https://downloads.horacal.app/direct/stable/releases/1.0.25/372/hora-calendar-1.0.25-372.zip"
   name "hora Calendar"
   desc "Calendar app for focused planning"
   homepage "https://horacal.app"
