@@ -1,17 +1,33 @@
 cask "hora" do
-  version "3.0.1,645"
-  sha256 "28eff24aedb68c66d92849ee512f942ead63e799ed88aa650669a54f44969cc9"
+  version "3.0.2,651"
+  sha256 "0b085d9c155be69c80f551b320a0adf2f90702181e416d57dd8e16332526702f"
 
-  url "https://downloads.horacal.app/direct/stable/releases/3.0.1/645/hora-calendar-3.0.1-645.zip"
+  url "https://downloads.horacal.app/direct/stable/releases/#{version.csv.first}/#{version.csv.second}/hora-calendar-#{version.csv.first}-#{version.csv.second}.zip"
   name "hora Calendar"
-  desc "Calendar app for focused planning"
-  homepage "https://horacal.app"
+  desc "Google Calendar client with tasks and focus planning"
+  homepage "https://horacal.app/"
 
   livecheck do
-    skip "Updated directly by the Hora release pipeline"
+    url "https://downloads.horacal.app/direct/stable/appcast.xml"
+    strategy :sparkle
   end
 
-  depends_on macos: :tahoe
+  auto_updates true
+  depends_on macos: :sequoia
 
   app "hora Calendar.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/CKWYP7CT7C.szamowski.Hora-direct",
+    "~/Library/Application Scripts/szamowski.Hora-direct",
+    "~/Library/Application Scripts/szamowski.Hora-direct.HoraWidgets",
+    "~/Library/Application Support/szamowski.Hora-direct",
+    "~/Library/Application Support/szamowski.Hora-direct.revenuecat",
+    "~/Library/Caches/szamowski.Hora-direct",
+    "~/Library/Containers/szamowski.Hora-direct",
+    "~/Library/Containers/szamowski.Hora-direct.HoraWidgets",
+    "~/Library/Group Containers/CKWYP7CT7C.szamowski.Hora-direct",
+    "~/Library/HTTPStorages/szamowski.Hora-direct",
+    "~/Library/Preferences/szamowski.Hora-direct.plist",
+  ]
 end
