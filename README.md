@@ -1,10 +1,11 @@
 # Hora Homebrew Tap
 
-Install the latest direct release of hora Calendar:
+hora Calendar is now in the official Homebrew cask repository:
 
 ```sh
-brew install --cask szamowski-dev/tap/hora
+brew install --cask hora-calendar
 ```
 
-The cask uses an immutable, signed and notarized ZIP. App updates are delivered
-by hora Calendar through Sparkle.
+This tap no longer carries a cask. `tap_migrations.json` moves existing
+`szamowski-dev/tap/hora` installs to `homebrew/cask/hora-calendar` on the next
+`brew update`. App updates are delivered by hora Calendar through Sparkle.
